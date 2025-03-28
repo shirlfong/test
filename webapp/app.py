@@ -33,18 +33,7 @@ os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 
 IMAGE_SIZE = (224, 224)  
 FILE_TYPES = ["jpg", "jpeg", "png"]
-MODEL_PATH = "densenet201_best_model_bayes_optimization.h5"
 
-"""
-MODEL_PATH = "densenet201_best_model_bayes_optimization.h5"
-
-# Load final DenseNet201 model
-try:
-    model = tf.keras.models.load_model(MODEL_PATH, compile=False)
-except Exception as e:
-    st.error(f"Error loading model: {e}")
-    model = None
-"""
 model = tf.keras.models.load_model('densenet201_best_model_bayes_optimization.h5', compile=False)
 # Label mappings
 labels = [
